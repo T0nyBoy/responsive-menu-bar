@@ -29,25 +29,18 @@ forSubmenu.addEventListener("click", ()=>{
         
 
 //Make scroll bar change class on scroll below 4.2em
+//Adding to top functionality in the scroll 
 window.onscroll = function (e) {
-    if(window.scrollY>20){
+    if(window.scrollY>67){
         menuBar.classList.add("menuScrolled");
-    } else if(window.scrollY<=67){
-        menuBar.classList.remove("menuScrolled");
-    }
-};
-
-//To Top Button Functionallity----------------
-window.onscroll = function (e) {
-    if(window.scrollY>20){
         toTopButton.classList.add("toTopButtonAppear");
         toTopButton.classList.remove("toTopButtonHide");
-    } else if (window.scrollY<=20){
+    } else if(window.scrollY<=67){
+        menuBar.classList.remove("menuScrolled");
         toTopButton.classList.remove("toTopButtonAppear");
         toTopButton.classList.add("toTopButtonHide");
-    }
+    };
 };
-
 
 toTopButton.addEventListener("click", ()=>{
     document.body.scrollTop = 0; // For Safari
