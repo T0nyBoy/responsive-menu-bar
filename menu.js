@@ -4,6 +4,7 @@ let forSubmenu = document.querySelector(".forSubmenu");
 let submenuContainer = document.querySelector(".submenuContainer");
 let mainBody=document.querySelector(".mainBody");
 let menuBar = document.querySelector(".menu");
+let toTopButton = document.querySelector(".toTopButton");
 
 
 //when in small screen tap burger to make menu appear
@@ -35,3 +36,20 @@ window.onscroll = function (e) {
         menuBar.classList.remove("menuScrolled");
     }
 };
+
+//To Top Button Functionallity----------------
+window.onscroll = function (e) {
+    if(window.scrollY>20){
+        toTopButton.classList.add("toTopButtonAppear");
+        toTopButton.classList.remove("toTopButtonHide");
+    } else if (window.scrollY<=20){
+        toTopButton.classList.remove("toTopButtonAppear");
+        toTopButton.classList.add("toTopButtonHide");
+    }
+};
+
+
+toTopButton.addEventListener("click", ()=>{
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+})

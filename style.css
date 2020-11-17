@@ -228,6 +228,26 @@ but for bigger screens we want a transition to be aaplied */
     
 }
 
+/*----------------- Arrow Up Button--------------------- */
+
+.toTopButtonHide{
+    display: none;
+}
+
+.toTopButtonAppear{
+    display: box;
+    position: fixed;
+    bottom: 1.5em;
+    left: 1.5em;
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease-in;
+}
+
+.toTopButtonAppear:hover{
+    color: rgba(255, 255, 255, 0.905);
+}
+/* ----------------------------------------------------- */
 
 
 /* MAIN BODY ITEMS */
